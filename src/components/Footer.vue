@@ -1,24 +1,23 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-left">
-        <img src="../assets/images/logo.jpg" alt="Logo dreamy" class="footer-logo" />
-        <div class="footer-description">
-          <strong>dreamy.</strong>
-          <p>
-            Dreamy UI Kit. Carefully crafted UI components for Adobe Experience Design.<br>
-            100+ components and sample pages will help you to create any project.
-          </p>
+      <div class="footer-brand">
+        <div class="brand-title">
+          <img src="../assets/images/logo.jpg" alt="Logo Kabo" class="brand-logo" />
+          <strong>KABO</strong>
         </div>
+        <p class="brand-description">
+          Ropa deportiva de alta calidad para tu mejor rendimiento.
+        </p>
       </div>
       <nav class="footer-nav">
-        <a href="#">ABOUT</a>
-        <a href="#">PRODUCTS</a>
+        <a href="#">INICIO</a>
+        <a href="#">HOMBRE</a>
+        <a href="#">MUJER</a>
+        <a href="#">ACCESORIOS</a>
+        <a href="#">CONTACTO</a>
+        <a href="#">NOSOTROS</a>
         <a href="#">BLOG</a>
-        <a href="#">SHOP</a>
-        <a href="#">CONTACTS</a>
-        <a href="#">ACERCA DE NOSOTROS</a>
-        <a href="#">CONTÁCTANOS</a>
         <a href="#">POLÍTICAS</a>
       </nav>
     </div>
@@ -28,53 +27,60 @@
 <style scoped>
 .footer {
   background: #f2f2f2;
-  padding: 48px 0 32px 0;
+  padding: 56px 0 24px 0;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #888;
   border-top: 1px solid #e0e0e0;
+  width: 100%;
+  position: fixed; /* Cambiado a fixed */
+  bottom: 0; /* Lo fija al fondo */
+  left: 0;
+  z-index: 100;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
 }
 
-.footer-left {
+.footer-brand {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.footer-logo {
-  width: 54px;
-  height: 54px;
+.brand-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-  margin-top: 2px;
+  border-radius: 8px;
 }
 
-.footer-description {
-  max-width: 370px;
+.brand-title strong {
+  font-size: 2.2rem;
+  color: #222;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
 
-.footer-description strong {
-  font-size: 1.5rem;
-  color: #444;
-  display: block;
-  margin-bottom: 8px;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
-.footer-description p {
-  font-size: 1rem;
-  color: #888;
+.brand-description {
+  font-size: 1.15rem;
+  color: #666;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
+  max-width: 600px;
 }
 
 .footer-nav {
@@ -82,19 +88,25 @@
   gap: 32px;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .footer-nav a {
   color: #888;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.5px;
-  font-size: 1.05rem;
-  transition: color 0.2s;
+  font-size: 1.08rem;
+  transition: color 0.2s, border-bottom 0.2s;
   text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
 }
 
 .footer-nav a:hover {
   color: #222;
+  border-bottom: 2px solid #222;
 }
 </style>
