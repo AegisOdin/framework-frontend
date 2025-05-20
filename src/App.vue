@@ -6,6 +6,6 @@ import LoginForm from "./components/LoginForm.vue"; // Importa el LoginForm
 
 <template>
   <Header />
-  <LoginForm />
+  <router-view />
   <Footer />
 </template>
