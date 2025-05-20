@@ -1,6 +1,6 @@
 <template>
   <div class="mail-view">
-    <form class="mail-form">
+    <form class="mail-form" @submit.prevent="sendMail">
       <div class="form-group">
         <label for="subject">Subject</label>
         <input
@@ -21,10 +21,12 @@
           rows="6"
           placeholder="Write here the whole context of the email!!"
         ></textarea>
-        
       </div>
 
-      <button type="button" class="save-btn">Send Mail</button>
+      <button type="submit" class="save-btn">Send Mail</button>
+      <div v-if="status" :class="status.ok ? 'hint' : 'hint small'" style="margin-top:1rem;">
+        {{ status.message }}
+      </div>
     </form>
   </div>
 </template>
@@ -33,10 +35,38 @@
 import { ref } from 'vue'
 
 const subject = ref('')
-const fromName = ref('')
-const body = ref(``)
+const body = ref('')
+const status = ref(null)
 
+const user = JSON.parse(localStorage.getItem('user') || '{}')
 
+async function sendMail() {
+  status.value = null
+  try {
+    const res = await fetch('http://localhost:3000/enviar-mensaje', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      credentials: 'include', // importante para enviar la cookie de sesión
+      body: JSON.stringify({
+        mensaje: body.value,
+        correo: user.email,
+        asunto: subject.value
+      })
+    })
+    const data = await res.json()
+    if (data.ok) {
+      status.value = { ok: true, message: 'Correo enviado correctamente.' }
+      subject.value = ''
+      body.value = ''
+    } else {
+      status.value = { ok: false, message: data.error || 'Error al enviar el correo.' }
+    }
+  } catch (e) {
+    status.value = { ok: false, message: 'Error de red o servidor.' }
+  }
+}
 </script>
 
 <style scoped>
