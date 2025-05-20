@@ -4,15 +4,17 @@
       <!-- Logo y nombre -->
       <div class="brand">
         <img src="../assets/images/logo.jpg" alt="Logo Kabo" class="logo" />
-        <h1>KABO</h1>
+        <span class="brand-name">KABO</span>
       </div>
 
-      <!-- Menú principal -->
+      <!-- Menú principal centrado -->
       <nav class="main-nav">
-        <a href="#">HOME</a>
-        <a href="#">ROPA</a>
-        <a href="#">ACCESORIOS</a>
-        <a href="#">CONTACTO</a>
+        <div class="nav-center">
+          <a href="#" class="nav-link">Productos</a>
+          <a href="#" class="nav-link">Para empresas</a>
+          <a href="#" class="nav-link">Servicio y soporte técnico</a>
+          <a href="#" class="nav-link ">Planes y precios</a>
+        </div>
       </nav>
 
       <!-- Iconos -->
@@ -39,68 +41,83 @@
 
 <style scoped>
 .header {
-  background: #f2f2f2;
-  border-bottom: 1px solid #e0e0e0;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dadce0;
   width: 100%;
-  position: fixed; /* Fija el header en la parte superior */
-  top: 0; /* Lo pega arriba */
+  position: fixed;
+  top: 0;
   left: 0;
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  padding: 15px 0;
+  z-index: 1000;
+  padding: 16px 0;
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
+  margin-right: 40px;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
-  border-radius: 8px;
 }
 
-.brand h1 {
-  font-size: 2rem;
-  color: #222;
-  margin: 0;
-  font-weight: 700;
-  letter-spacing: 2px;
+.brand-name {
+  font-size: 1.5rem;
+  color: #3c4043;
+  font-weight: 500;
 }
 
+/* Menú centrado */
 .main-nav {
+  flex-grow: 1;
   display: flex;
-  gap: 30px;
+  justify-content: center;
 }
 
-.main-nav a {
-  color: #555;
+.nav-center {
+  display: flex;
+  gap: 0;
+}
+
+.nav-link {
+  color: #000000;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.2s;
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 0 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
-.main-nav a:hover {
-  color: #222;
+.nav-link:hover {
+  background-color: #f1f3f4;
+  color: #202124;
+}
+
+.nav-link.active {
+  color: #202124;
+  font-weight: 600;
+  background-color: #e8f0fe;
 }
 
 .action-icons {
   display: flex;
   gap: 20px;
+  margin-left: 30px;
 }
 
 .icon-btn {
@@ -108,38 +125,50 @@
   border: none;
   cursor: pointer;
   padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+  background-color: #f1f3f4;
 }
 
 .icon {
   width: 24px;
   height: 24px;
-  fill: #555;
-  transition: fill 0.2s;
+  fill: #5f6368;
 }
 
 .icon-btn:hover .icon {
-  fill: #222;
+  fill: #202124;
 }
 
-.main-content {
-  margin-top: 90px; /* Asegura que el contenido no quede detrás del header */
-  min-height: calc(100vh - 180px); /* Ajusta según el tamaño de tu footer */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 0 20px;
+  }
+  
+  .brand {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    gap: 15px;
+  .header {
+    padding: 12px 0;
   }
   
   .main-nav {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
   }
   
-  .main-content {
-    margin-top: 150px; /* Más espacio para el header en móvil */
+  .action-icons {
+    margin-left: auto;
   }
 }
 </style>
