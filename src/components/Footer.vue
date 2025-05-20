@@ -1,112 +1,141 @@
 <template>
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <div class="brand-title">
-          <img src="../assets/images/logo.jpg" alt="Logo Kabo" class="brand-logo" />
-          <strong>KABO</strong>
+  <div class="footer-extension">
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../assets/images/logo.jpg" alt="Logo Kabo" class="logo" />
+          <span class="logo-text">KABO</span>
         </div>
-        <p class="brand-description">
-          Ropa deportiva de alta calidad para tu mejor rendimiento.
-        </p>
+        <div class="footer-links">
+          <div class="links-left">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Acerca de Kabo</a>
+          </div>
+          <div class="links-right">
+            <a href="#">Productos</a>
+            <a href="#">Nuestra política</a>
+            <a href="#">Ayuda</a>
+          </div>
+        </div>
+        <div class="footer-language">
+          <span>Español (Latinoamérica) - México</span>
+        </div>
       </div>
-      <nav class="footer-nav">
-        <a href="#">INICIO</a>
-        <a href="#">HOMBRE</a>
-        <a href="#">MUJER</a>
-        <a href="#">ACCESORIOS</a>
-        <a href="#">CONTACTO</a>
-        <a href="#">NOSOTROS</a>
-        <a href="#">BLOG</a>
-        <a href="#">POLÍTICAS</a>
-      </nav>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </template>
 
 <style scoped>
-.footer {
-  background: #f2f2f2;
-  padding: 56px 0 24px 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  color: #888;
-  border-top: 1px solid #e0e0e0;
+.footer-extension {
+  background: #f8f9fa;
+  border-top: 1px solid #dadce0;
   width: 100%;
-  position: fixed; /* Cambiado a fixed */
-  bottom: 0; /* Lo fija al fondo */
+  position: fixed;
+  bottom: 0;
   left: 0;
   z-index: 100;
 }
 
-.footer-content {
-  max-width: 900px;
+.footer {
+  background: #f8f9fa;
+  padding: 25px 40px;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #70757a;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 28px;
+  font-size: 16px;
 }
 
-.footer-brand {
+.footer-content {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  gap: 25px;
 }
 
-.brand-title {
+.footer-logo {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 10px;
+  min-width: 140px;
 }
 
-.brand-logo {
-  width: 40px;
-  height: 40px;
+.logo {
+  width: 32px;
+  height: 32px;
   object-fit: contain;
-  border-radius: 8px;
 }
 
-.brand-title strong {
-  font-size: 2.2rem;
-  color: #222;
-  letter-spacing: 2px;
-  font-weight: 700;
+.logo-text {
+  font-weight: 500;
+  color: #3c4043;
+  font-size: 20px;
 }
 
-.brand-description {
-  font-size: 1.15rem;
-  color: #666;
-  margin: 0;
-  line-height: 1.6;
-  max-width: 600px;
+.footer-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  gap: 32px;
 }
 
-.footer-nav {
+.links-left, .links-right {
   display: flex;
   gap: 32px;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  margin-top: 10px;
 }
 
-.footer-nav a {
-  color: #888;
+.footer-links a {
+  color: #70757a;
   text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  font-size: 1.08rem;
-  transition: color 0.2s, border-bottom 0.2s;
-  text-transform: uppercase;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  font-size: 16px;
+  padding: 4px 0;
 }
 
-.footer-nav a:hover {
-  color: #222;
-  border-bottom: 2px solid #222;
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #3c4043;
 }
+
+.footer-language {
+  min-width: 200px;
+  text-align: right;
+  color: #3c4043;
+  font-size: 16px;
+  padding: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 22px 25px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .links-left, .links-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .footer-language {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+}
+
 </style>
