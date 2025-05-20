@@ -35,11 +35,6 @@
       </div>
     </div>
   </header>
-
-  <!-- Espacio para el contenido principal -->
-  <main class="main-content">
-    <!-- Tu contenido irá aquí -->
-  </main>
 </template>
 
 <style scoped>

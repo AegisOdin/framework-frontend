@@ -1,11 +1,11 @@
 <script setup>
-import Header from './components/header.vue' // Importa el Header
-import Footer from './components/Footer.vue' // Importa el Footer'
+import Header from "./components/header.vue"; // Importa el Header
+import Footer from "./components/Footer.vue"; // Importa el Footer'
+import LoginForm from "./components/LoginForm.vue"; // Importa el LoginForm
 </script>
 
 <template>
-  <Header /> <!-- Aquí se muestra el Header -->
-  <HelloWorld msg="Vite + Vue" />
-  <Footer /> <!-- Aquí se muestra el Footer -->
+  <Header />
+  <LoginForm />
+  <Footer />
 </template>
-
