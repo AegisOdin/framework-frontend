@@ -22,8 +22,7 @@
           placeholder="Write here the whole context of the email!!"
         ></textarea>
       </div>
-
-      <button type="submit" class="save-btn">Send Mail</button>
+        <button type="submit" class="save-btn">Send Mail</button>
       <div v-if="status" :class="status.ok ? 'hint' : 'hint small'" style="margin-top:1rem;">
         {{ status.message }}
       </div>
@@ -74,8 +73,7 @@ async function sendMail() {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 170px;
-  width: 50em;
+  margin: 10em;
 }
 .mail-form {
   background: #fff;

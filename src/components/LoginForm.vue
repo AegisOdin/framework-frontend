@@ -96,7 +96,7 @@ function loginWithGoogle() {
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
 .login-container {
-  margin-bottom: 140px;
+    margin: 10em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,7 +116,7 @@ function loginWithGoogle() {
   box-sizing: border-box;
   color: #e3e3e3;
   cursor: pointer;
-  font-family: "Roboto", arial, sans-serif;
+  font-family: 'Roboto', arial, sans-serif;
   font-size: 14px;
   height: 40px;
   letter-spacing: 0.25px;
@@ -125,8 +125,8 @@ function loginWithGoogle() {
   padding: 0 12px;
   position: relative;
   text-align: center;
-  -webkit-transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
-  transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
+  -webkit-transition: background-color .218s, border-color .218s, box-shadow .218s;
+  transition: background-color .218s, border-color .218s, box-shadow .218s;
   vertical-align: middle;
   white-space: nowrap;
   width: auto;
@@ -159,7 +159,7 @@ function loginWithGoogle() {
 .gsi-material-button .gsi-material-button-contents {
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  font-family: "Roboto", arial, sans-serif;
+  font-family: 'Roboto', arial, sans-serif;
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -167,8 +167,8 @@ function loginWithGoogle() {
 }
 
 .gsi-material-button .gsi-material-button-state {
-  -webkit-transition: opacity 0.218s;
-  transition: opacity 0.218s;
+  -webkit-transition: opacity .218s;
+  transition: opacity .218s;
   bottom: 0;
   left: 0;
   opacity: 0;
@@ -195,23 +195,22 @@ function loginWithGoogle() {
   opacity: 38%;
 }
 
-.gsi-material-button:not(:disabled):active .gsi-material-button-state,
+.gsi-material-button:not(:disabled):active .gsi-material-button-state, 
 .gsi-material-button:not(:disabled):focus .gsi-material-button-state {
   background-color: white;
   opacity: 12%;
 }
 
 .gsi-material-button:not(:disabled):hover {
-  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
-    0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
-    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
 }
 
 .gsi-material-button:not(:disabled):hover .gsi-material-button-state {
   background-color: white;
   opacity: 8%;
 }
+
 
 .login-box {
   background: #fff;
@@ -226,7 +225,7 @@ function loginWithGoogle() {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #333;
+  color : #333;
 }
 
 .input-group {
@@ -314,18 +313,6 @@ function loginWithGoogle() {
   background: none;
   font-size: 1.2rem;
   cursor: pointer;
-}
-
-.facebook {
-  color: #3b5998;
-}
-
-.twitter {
-  color: #1da1f2;
-}
-
-.google {
-  color: #ea4335;
 }
 
 .signup-link {
