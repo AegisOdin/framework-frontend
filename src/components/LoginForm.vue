@@ -96,7 +96,7 @@ function loginWithGoogle() {
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
 .login-container {
-    margin: 10em;
+    margin: 3em;
   display: flex;
   align-items: center;
   justify-content: center;

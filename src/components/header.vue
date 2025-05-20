@@ -44,7 +44,6 @@
   background: #f8f9fa;
   border-bottom: 1px solid #dadce0;
   width: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;

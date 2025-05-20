@@ -73,7 +73,7 @@ async function sendMail() {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 10em;
+  margin: 5em;
 }
 .mail-form {
   background: #fff;
